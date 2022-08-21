@@ -26,3 +26,9 @@ Disclaimer: We haven't yet talked about the methods PUT and DELETE. They are met
 | POST   | /places/:id/rant         | Create a rant (comment) about a particular place |
 | DELETE | /places/:id/rant/:rantId | Delete a rant (comment) about a particular place |
 | GET    | \*                       | 404 page (matches any route not defined above)   |
+
+Your places should have a name (string), city (string), state (string), cuisines (string) and a pic (string)
+
+| Name   | City   | State  | Cuisines | Picture |
+| ------ | ------ | ------ | -------- | ------- |
+| String | String | String | String   | String  |
