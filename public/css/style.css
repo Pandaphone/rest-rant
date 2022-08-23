@@ -3,6 +3,21 @@ h1 {
     color: cornflowerblue;
   }
 
+  h2 {
+    text-align: center;
+    color: lightblue;
+  }
+
+  .tophalf {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+
   body {
     background-color: lightblue;
     text-align: center;
