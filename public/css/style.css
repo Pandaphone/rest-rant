@@ -8,30 +8,19 @@ h1 {
     color: lightblue;
   }
 
-  .tophalf {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .sidebar {
-    display: flex;
-    flex-direction: column;
-  }
-
   body {
-    background-color: lightblue;
-    text-align: center;
+    background-color: #ffe9da;
   }
   
   main {
     margin-right: 20px;
     margin-left: 20px;
-    background-color: white;
   }
 
   nav {
     background-color: cornflowerblue;
     padding: 10px;
+    text-align: center;
 }
 
 nav ul {
@@ -52,4 +41,46 @@ nav a {
 nav a:hover {
     color: pink;
     text-decoration: none;
+}
+
+.large-images {
+  max-width: 1000px;
+  border-radius: 25px;
+  border: 10px solid #ffffff;
+}
+
+.subtitle {
+  margin-bottom: 65px;
+}
+
+.top-block {
+  background-color: white;
+  max-width: 500px;
+}
+
+.top-block p{
+  margin-bottom: 0px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.bottom-block {
+  background-color: white;
+  max-width: 500px;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.thumbnail-pic {
+  max-width: 500px;
+}
+
+.text-centering {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.spacer {
+  margin-top: 25px;
 }

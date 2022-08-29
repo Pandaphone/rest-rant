@@ -43,7 +43,7 @@ function show (data) {
   }
     return (
         <Def>
-          <main className='container'>
+          <main className='container text-centering'>
             <div className='row'>
               <div className="col-sm-6">
                 <img src={data.place.pic} alt={data.place.name} />
@@ -81,21 +81,21 @@ function show (data) {
 
             
             <form method="POST" action={`/places/${data.place.id}/comment`}>
-                <div className="form-group">
+                <div className="form-group col-sm-4">
                   <label htmlFor="author">Author:</label>
                   <input className="form-control" id="author" name="author" required />
                 </div>
-                <div className="form-group">
+                <div className="form-group col-sm-4">
                   <label htmlFor="content"></label>
                   <textarea id="content" name="content" placeholder="Type your review here!" rows="4" cols="50" />
                 </div>
-                <div className="form-group">
+                <div className="form-group col-sm-4">
                   <label htmlFor="stars">Star Rating</label>
                   <input className="form-control" type="number" id="stars" name="stars"  step={0.5} />
                 </div>
                 <div className="form-group">
                   <label htmlFor="rant">Rant?</label>
-                  <input type="checkbox" id="rant" name="rant" required />
+                  <input type="checkbox" id="rant" name="rant" />
                   <button type="submit" className="btn btn-danger"></button>
                 </div>
               </form>
