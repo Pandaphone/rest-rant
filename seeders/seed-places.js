@@ -1,4 +1,4 @@
-const db = require('./models/')
+const db = require('../controllers/models')
 
 db.Place.create([{
     name: 'H-Thai-ML',
