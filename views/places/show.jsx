@@ -71,8 +71,8 @@ function show (data) {
                   <input className="form-control" type="number" id="stars" name="stars"  step={0.5} />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="rant">Rave?</label>
-                  <input className="form-control" type="checkbox" id="rant" name="rant" required />
+                  <label htmlFor="rant">Rant?</label>
+                  <input type="checkbox" id="rant" name="rant" required />
                   <button type="submit" className="btn btn-danger"></button>
                 </div>
               </form>
