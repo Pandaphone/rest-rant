@@ -2,6 +2,25 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
+  let comments = (
+    <h3 className="inactive">
+      No comments yet!
+    </h3>
+  )
+  if (data.place.comments.length) {
+    comments = data.place.comments.map(c => {
+      return (
+        <div className="border">
+          <h2 className="rant">{c.rant ? 'Rant! 😡' : 'Rave! 😻'}</h2>
+          <h4>{c.content}</h4>
+          <h3>
+            <stong>- {c.author}</stong>
+          </h3>
+          <h4>Rating: {c.stars}</h4>
+        </div>
+      )
+    })
+  }
     return (
         <Def>
           <main className='container'>
@@ -33,12 +52,34 @@ function show (data) {
                   </button>
                 </form>       
                 <h2>Comments</h2>
-                <p>No comments yet.</p>
+                {comments}
               </div>
             </div>
+
+            
+            <form method="POST" action={`/places/${data.place.id}/comment`}>
+                <div className="form-group">
+                  <label htmlFor="author">Author:</label>
+                  <input className="form-control" id="author" name="author" required />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="content"></label>
+                  <textarea id="content" name="content" placeholder="Type your review here!" rows="4" cols="50" />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="stars">Star Rating</label>
+                  <input className="form-control" type="number" id="stars" name="stars"  step={0.5} />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="rant">Rave?</label>
+                  <input className="form-control" type="checkbox" id="rant" name="rant" required />
+                  <button type="submit" className="btn btn-danger"></button>
+                </div>
+              </form>
           </main>
         </Def>
     )
 }
 
 module.exports = show
+
